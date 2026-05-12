@@ -149,38 +149,20 @@ Typical result fields:
 Train the video model:
 
 ```bash
-python -m training.train_video ^
-  --data_dir data/processed/video ^
-  --save_dir data/models ^
-  --backbone efficientnet_b4 ^
-  --epochs 30 ^
-  --batch_size 32 ^
-  --lr 1e-4 ^
-  --device cuda
+python -m training.train_video --data_dir data/processed/video --save_dir data/models --backbone efficientnet_b4 --epochs 30 --batch_size 32 --lr 1e-4 --device cuda
 ```
 
 Train the audio model:
 
 ```bash
-python -m training.train_audio ^
-  --data_dir data/processed/audio ^
-  --save_dir data/models ^
-  --epochs 40 ^
-  --batch_size 64 ^
-  --device cuda
+python -m training.train_audio --data_dir data/processed/audio --save_dir data/models --epochs 40 --batch_size 64 --device cuda
 ```
 
 Evaluate saved models:
 
 ```bash
-python -m training.evaluate ^
-  --data_dir data/processed/video/test ^
-  --video_model data/models/video_model.pth ^
-  --audio_model data/models/audio_model.pth ^
-  --output_dir eval_results
+python -m training.evaluate --data_dir data/processed/video/test --video_model data/models/video_model.pth --audio_model data/models/audio_model.pth --output_dir eval_results
 ```
-
-For macOS/Linux, replace `^` line continuations with `\`.
 
 ## Model Artifacts
 
