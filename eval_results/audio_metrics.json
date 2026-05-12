@@ -1,0 +1,10 @@
+{
+  "n_samples": 130,
+  "n_errors": 0,
+  "accuracy": 0.9846,
+  "precision": 0.9846,
+  "recall": 0.9846,
+  "f1": 0.9846,
+  "auc_roc": 0.9998,
+  "avg_precision": 0.9998
+}
